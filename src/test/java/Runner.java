@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		//Executa os códigos que o console(System.out) for invocado
-		plugin = "pretty",
+		plugin = {"pretty"},
 		
 		//Não vai tentar colorir os comandos e nem usará caracteres especiais
 		monochrome=true,
@@ -17,7 +17,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		
 		//Executa os metodos para testar o mapeamento ,
 		//Ou seja, os conteúdos dos metodos não serão executados
-		dryRun = true,
+		//Para ativar, precisar deixar o valor true
+	
 		
 		//Quando faltar um passo no arquivo feature, no código onde foi mapeado,
 		//Não será executado, ou seja o teste falhará
