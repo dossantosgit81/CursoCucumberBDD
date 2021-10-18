@@ -44,13 +44,9 @@ public class AprenderCucumber {
 	}
 	
 	Date entrega = new Date();
-	@Dado("que o prazo é dia {int}\\/{int}\\/{int}")
-	public void queOPrazoÉDia(Integer dia, Integer mes, Integer ano) {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.DAY_OF_MONTH, dia);
-		cal.set(Calendar.MONTH, mes - 1);
-		cal.set(Calendar.YEAR, ano);
-		entrega.getTime();
+	@Dado("que o prazo é dia {data}")
+	public void queOPrazoÉDia(Date data) {
+		entrega = data;
 	}
 
 	@Quando("^a entrega atrasar em (\\d+) (dia|dias|mes|meses)$")
@@ -81,7 +77,7 @@ public class AprenderCucumber {
 
 	}
 
-	@Dado("que o valor da passagem é R$ {double}")
+	@Dado("^que o valor da passagem é R\\$ (.*)$")
 	public void queOValorDaPassagemÉR$(Double double1) {
 
 	}
