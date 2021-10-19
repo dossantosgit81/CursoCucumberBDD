@@ -1,3 +1,4 @@
+package br.co.rafael.runners;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
@@ -6,6 +7,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		features = "src/test/resources/features/aprender_cucumber.feature",
+		glue = {"br.co.rafael.steps", "br.co.rafael.config"},
+		tags={"@tipo1, @tipo2"},
+		
 		//Executa os códigos que o console(System.out) for invocado
 		plugin = {"pretty"},
 		

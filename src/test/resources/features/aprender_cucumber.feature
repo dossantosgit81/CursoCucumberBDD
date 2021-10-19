@@ -1,4 +1,5 @@
 # language: pt
+#@esse
 Funcionalidade: Aprender Cucumber
 	Como um aluno
 	Eu quero aprender a utilizar Cucumber
@@ -24,26 +25,30 @@ Cenario: Deve calcular atraso no prazo de entrega
 	Quando a entrega atrasar em 2 dias
 	Então a entrega será efetuada em 20/10/2021
 	
+@tipo1
 Cenario: Deve calcular atraso na entrga da china
 	Dado que o prazo é dia 18/10/2021
 	Quando a entrega atrasar em 2 meses
 	Então a entrega será efetuada em 18/12/2021
-
+	
+@tipo2
 Cenário: Deve criar steps genéricos para estes passos
   Dado que o ticket é AF345
-  Dado que o valor da passagem é R$ 230,45
-  Dado que o nome do passageiro é "Fulano da Silva"
-  Dado que o telefone do passageiro é 9999-9999
+  E que o valor da passagem é R$ 230,45
+  E que o nome do passageiro é "Fulano da Silva"
+  E que o telefone do passageiro é 9999-9999
   Quando criar os steps
   Então o teste vai funcionar
 
+@tipo1 @tipo2
 Cenário: Deve reaproveitar os steps "Dado" do cenário anterior
-  Dado que o ticket é AB167
-  Dado que o ticket especial é AB167
-  Dado que o valor da passagem é R$ 1120,23
+  * que o ticket é AB167
+  * que o ticket especial é AB167
+  Mas que o valor da passagem é R$ 1120,23
   Dado que o nome do passageiro é "Cicrano de Oliveira"
   Dado que o telefone do passageiro é 9888-8888
 
+#@ignore
 #Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
   #Dado que o ticket é CD123
   #Dado que o ticket é AG1234

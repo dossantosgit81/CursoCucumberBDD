@@ -1,3 +1,4 @@
+package br.co.rafael.steps;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -10,7 +11,7 @@ import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 
 //passou, falhou, skipped, pending e undefined
-public class AprenderCucumber {
+public class AprenderCucumberSteps {
 
 	@Dado("que criei o arquivo corretamente")
 	public void queCrieiOArquivoCorretamente() {
