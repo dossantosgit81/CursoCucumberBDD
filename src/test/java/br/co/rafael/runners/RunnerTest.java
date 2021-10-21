@@ -11,11 +11,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		glue = {"br.co.rafael.steps"},
 		tags={},
 		
-		//Executa os códigos que o console(System.out) for invocado
-		plugin = {"pretty"},
+		//Executa os códigos quando o console(System.out) for invocado na minha app e gera relatorios
+		plugin = {"pretty", "html:target/report-html", "json:target/report-json"},
 		
 		//Não vai tentar colorir os comandos e nem usará caracteres especiais
-		monochrome=true,
+		monochrome=false,
 		
 		//Cria os metodos em formato camelCase
 		snippets = SnippetType.CAMELCASE,
@@ -29,7 +29,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		//Não será executado, ou seja o teste falhará
 		strict = true
 		)
-public class Runner {
+public class RunnerTest {
 	
 	
 

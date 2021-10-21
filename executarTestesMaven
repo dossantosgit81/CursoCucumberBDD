@@ -1,0 +1,11 @@
+mvn test
+
+Opções de valores cucumberoptions
+	mvn test -Dcucumber.options "-h"
+	
+Sobrescrever monochrome cucumberoptions
+	mvn test -Dcucumber.options="-m"
+
+Executar feature especifica
+	mvn test -Dcucumber.options="src/test/resources/features/alugar_filme.feature"
+	
