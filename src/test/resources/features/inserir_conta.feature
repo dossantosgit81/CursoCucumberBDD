@@ -8,17 +8,10 @@ Gostaria de cadastrar contas
 Para que eu possa distribuir meu dinheiro de uma forma mais organizada
 
 Contexto:
-Dado que estou acessando a aplicação
-Quando informo o usuário "rm@gmail.com"
-E a senha "carreta"
-E seleciono entrar
-Então visualizo a página inicial
-Quando seleciono Contas
-E seleciono Adicionar
+Dado que desejo adicionar uma conta
 	
 Esquema do Cenário: Deve validar cadastro contas
-Quando informo a conta "<conta>"
-E seleciono Salvar
+Quando adiciono a conta "<conta>"
 Então recebo a mensagem "<mensagem>"
 
 Exemplos:
@@ -27,3 +20,8 @@ Exemplos:
 |                  | Informe o nome da conta           |
 | Conta mesmo nome | Já existe uma conta com esse nome!|
 
+#*Variação do cenario acima
+# 	Cenário: Deve inserir uma conta com sucesso
+#			Dado que desejo adicionar uma conta
+#     Quando adiciono uma conta válida
+#			Então a conta é inserida com sucesso
